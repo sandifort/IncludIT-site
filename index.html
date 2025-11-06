@@ -1,109 +1,111 @@
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Inclusive Solutions</title>
+  <meta name="description" content="Inclusive Solutions — we versterken talent en ontzorgen werkgevers met opleiding, plaatsing en coaching." />
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f7fa;
-      color: #003354;
-      line-height: 1.6;
+    :root{
+      --text:#003354;
+      --muted:#375d72;
+      --border:#e0e6eb;
+      --bg:#f4f7fa;
+      --brand:#2b7dbc;
     }
-
-    header {
-      background: white;
-      padding: 16px 32px;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      border-bottom: 1px solid #e0e6eb;
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
     }
-
-    header img {
-      height: 54px;
+    header{
+      background:#fff;
+      padding:14px 24px;
+      display:flex;
+      align-items:center;   /* linksboven, medium hoogte */
+      border-bottom:1px solid var(--border);
+      position: sticky;
+      top:0;
+      z-index:10;
     }
-
-    main {
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 0 24px;
-      text-align: center;
+    header img{
+      height:64px;          /* medium */
+      width:auto;
+      display:block;
     }
-
-    h1 {
-      font-size: 2.4rem;
-      margin-bottom: 16px;
-      color: #003354;
+    main{
+      max-width:900px;
+      margin:56px auto;
+      padding:0 24px;
+      text-align:center;
     }
-
-    p {
-      font-size: 1.2rem;
-      color: #375d72;
+    h1{
+      font-size:clamp(26px,4vw,40px);
+      margin:0 0 12px;
+      color:var(--text);
     }
-
-    section {
-      margin: 60px auto;
-      max-width: 900px;
-      padding: 0 24px;
-      text-align: center;
+    p{font-size:1.1rem;color:var(--muted)}
+    section{
+      margin:56px auto;
+      max-width:900px;
+      padding:0 24px;
+      text-align:center;
     }
-
-    footer {
-      margin-top: 80px;
-      padding: 20px;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #6c8394;
-      border-top: 1px solid #e0e6eb;
+    footer{
+      margin-top:72px;
+      padding:20px;
+      text-align:center;
+      font-size:.95rem;
+      color:#6c8394;
+      border-top:1px solid var(--border);
+      background:#fff;
     }
-
-    a {
-      color: #2b7dbc;
-      text-decoration: none;
-    }
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
   </style>
 </head>
 <body>
 
-<header>
-  <img src="logo.png" alt="Inclusive Solutions logo">
-</header>
+  <header>
+    <!-- Gebruik het transparante logo-bestand -->
+    <img src="logo_transparent.png" alt="Inclusive Solutions logo">
+  </header>
 
-<main>
-  <h1>Welkom bij Inclusive Solutions</h1>
-  <p>
-    Wij brengen talent en werkgevers duurzaam samen.<br>
-    Onze focus ligt op menselijkheid, duidelijke communicatie en inclusieve groei.
-  </p>
-</main>
+  <main>
+    <h1>Welkom bij Inclusive Solutions</h1>
+    <p>
+      Wij brengen talent en werkgevers duurzaam samen.<br>
+      Onze focus ligt op menselijkheid, duidelijke communicatie en inclusieve groei.
+    </p>
+  </main>
 
-<section>
-  <h2>Wat wij doen</h2>
-  <p>
-    Inclusive Solutions begeleidt professionals met een afstand tot de arbeidsmarkt
-    richting duurzame en betekenisvolle werkplekken — in samenwerking met werkgevers
-    die investeren in een inclusieve toekomst.
-  </p>
-</section>
+  <section>
+    <h2>Wat wij doen</h2>
+    <p>
+      Inclusive Solutions begeleidt professionals met een afstand tot de arbeidsmarkt
+      richting duurzame en betekenisvolle werkplekken — in samenwerking met werkgevers
+      die investeren in een inclusieve toekomst.
+    </p>
+  </section>
 
-<section>
-  <h2>Contact</h2>
-  <p>
-    Mail: <a href="mailto:info@inclusivesolutions.nl">info@inclusivesolutions.nl</a><br>
-    Tel: <a href="tel:+31101234567">010 - 123 45 67</a>
-  </p>
-</section>
+  <section>
+    <h2>Contact</h2>
+    <p>
+      Mail: <a href="mailto:info@inclusivesolutions.nl">info@inclusivesolutions.nl</a><br>
+      Tel: <a href="tel:+31101234567">010 – 123 45 67</a>
+    </p>
+  </section>
 
-<footer>
-  © <span id="year"></span> Inclusive Solutions — Alle rechten voorbehouden
-</footer>
+  <footer>
+    © <span id="year"></span> Inclusive Solutions — Alle rechten voorbehouden
+  </footer>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
